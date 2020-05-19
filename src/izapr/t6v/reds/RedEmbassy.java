@@ -12,11 +12,20 @@ public class RedEmbassy {
 
         final List<Message> messages = PostOffice.getInstance().retrieve("Červený");
         for (Message message : messages) {
-            System.out.println(message);
+            if (message instanceof RedSecretMessage) {
+                final RedSecretMessage redSecretMessage = (RedSecretMessage) message;
+                System.out.println(message);
+                System.out.println(redSecretMessage.getSecretMessage());
+            } else {
+                System.out.println(message);
+            }
             System.out.println();
         }
 
         System.out.println();
+
+        final RedSecretMessage rsm = new RedSecretMessage("Modrý", "Červený", "Hi!");
+        rsm.getSecretMessage();
     }
 
 }

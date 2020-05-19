@@ -1,7 +1,7 @@
 package izapr.t6v.blues;
 
 import izapr.t6v.post.PostOffice;
-import izapr.t6v.post.Postcard;
+import izapr.t6v.reds.RedSecretMessage;
 
 public class BlueEmbassy {
 
@@ -10,7 +10,7 @@ public class BlueEmbassy {
         System.out.println("==> Modrý");
 
         PostOffice.getInstance().send(
-                new Postcard(
+                new RedSecretMessage(
                         "Modrý",
                         "Červený",
                         "Dnes v noci zaútočíme na Zelený. "
